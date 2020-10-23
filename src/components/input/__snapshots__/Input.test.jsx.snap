@@ -60,6 +60,15 @@ exports[`Input component renders Input 1`] = `
         />
       </label>
       <label>
+        JSON Body
+      </label>
+      <input
+        id="body"
+        name="body"
+        type="text"
+        value=""
+      />
+      <label>
         Address Search
       </label>
       <input

@@ -5,11 +5,11 @@ import History from './History';
 describe('History component', () => {
   const data = [
     {
-      key: '10/22/20',
+      date: '10/22/20',
       url: 'futuramaapi.herokuapp.com/api/v2/characters',
       method: 'GET',
     }, {
-      key: '10/23/20',
+      date: '10/23/20',
       url: 'futuramaapi.herokuapp.com/api/quotes',
       method: 'GET'
     },

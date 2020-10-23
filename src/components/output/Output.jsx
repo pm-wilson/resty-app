@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactJson from 'react-json-view';
 
-const Output = () => (
-  <div>I am Output</div>
+const Output = ({ text }) => (
+  <div><ReactJson src={text} /></div>
 );
 
 Output.propTypes = {
-  // name: PropTypes.string.isRequired,
-  // onChange: PropTypes.func.isRequired,
+  text: PropTypes.object.isRequired,
 };
 
 export default Output;

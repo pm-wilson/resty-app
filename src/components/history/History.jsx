@@ -6,7 +6,8 @@ import styles from './historystyles.css';
 const History = ({ history }) => {
   const historyList = history.map((historyData) => (
     <HistoryItem 
-      key={historyData.key}
+      key={historyData.date}
+      date={historyData.date}
       url={historyData.url}
       method={historyData.method}
     />
@@ -22,7 +23,7 @@ const History = ({ history }) => {
 History.propTypes = {
   history: PropTypes.arrayOf(
     PropTypes.shape({
-      key: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
       method: PropTypes.string.isRequired,
     })

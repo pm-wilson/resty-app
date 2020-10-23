@@ -6,9 +6,10 @@ import History from '../history/History';
 class Brain extends Component {
   state = {
     history: [],
-    key: '',
     url: '',
-    method: '',
+    method: 'GET',
+    text: {},
+    body: '',
   }
 
   onChange = () => {
@@ -22,9 +23,9 @@ class Brain extends Component {
   render() {
     return (
       <div>
-        <Input />
-        <Output />
-        <History history={this.state.history}/>
+        <Input url={this.state.url} body={this.state.body} onChange={this.onChange} onSubmit={this.onSubmit} />
+        <Output text={this.state.text} />
+        <History history={this.state.history} />
       </div>
     );
   }

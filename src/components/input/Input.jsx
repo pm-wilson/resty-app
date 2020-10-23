@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ url, onChange, onSubmit }) => (
+const Input = ({ url, body, onChange, onSubmit }) => (
   <div>
-    <form onSubmit={onSubmit} onChange={onChange}>
+    <form onSubmit={onSubmit} >
       <label>
         <span>GET</span>
         <input
+          selected
           type="radio"
           name="method"
           id="get"
           value="GET"
+          onChange={onChange}
         />
       </label>
       <label>
@@ -20,6 +22,7 @@ const Input = ({ url, onChange, onSubmit }) => (
           name="method"
           id="post"
           value="POST"
+          onChange={onChange}
         />
       </label>
       <label>
@@ -29,6 +32,7 @@ const Input = ({ url, onChange, onSubmit }) => (
           name="method"
           id="put"
           value="PUT"
+          onChange={onChange}
         />
       </label>
       <label>
@@ -38,6 +42,7 @@ const Input = ({ url, onChange, onSubmit }) => (
           name="method"
           id="patch"
           value="PATCH"
+          onChange={onChange}
         />
       </label>
       <label>
@@ -47,14 +52,24 @@ const Input = ({ url, onChange, onSubmit }) => (
           name="method"
           id="delete"
           value="DELETE"
+          onChange={onChange}
         />
       </label>
+      <label>JSON Body</label>
+      <input
+        id="body"
+        type="text"
+        name="body"
+        value={body}
+        onChange={onChange}
+      />
       <label>Address Search</label>
       <input
         id="text"
         type="text"
         name="text"
         value={url}
+        onChange={onChange}
       />
     </form>
   </div>
@@ -62,6 +77,7 @@ const Input = ({ url, onChange, onSubmit }) => (
 
 Input.propTypes = {
   url: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };
