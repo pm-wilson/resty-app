@@ -16,7 +16,7 @@ class Brain extends Component {
   }
 
   onSubmit = () => {
-
+    //hit api
   }
 
   render() {

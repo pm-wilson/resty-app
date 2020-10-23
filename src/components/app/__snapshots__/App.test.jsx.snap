@@ -4,7 +4,72 @@ exports[`App component renders App 1`] = `
 <DocumentFragment>
   <div>
     <div>
-      I am Input
+      <form>
+        <label>
+          <span>
+            GET
+          </span>
+          <input
+            id="get"
+            name="method"
+            type="radio"
+            value="GET"
+          />
+        </label>
+        <label>
+          <span>
+            POST
+          </span>
+          <input
+            id="post"
+            name="method"
+            type="radio"
+            value="POST"
+          />
+        </label>
+        <label>
+          <span>
+            PUT
+          </span>
+          <input
+            id="put"
+            name="method"
+            type="radio"
+            value="PUT"
+          />
+        </label>
+        <label>
+          <span>
+            PATCH
+          </span>
+          <input
+            id="patch"
+            name="method"
+            type="radio"
+            value="PATCH"
+          />
+        </label>
+        <label>
+          <span>
+            DELETE
+          </span>
+          <input
+            id="delete"
+            name="method"
+            type="radio"
+            value="DELETE"
+          />
+        </label>
+        <label>
+          Address Search
+        </label>
+        <input
+          id="text"
+          name="text"
+          type="text"
+          value=""
+        />
+      </form>
     </div>
     <div>
       I am Output
