@@ -3,14 +3,18 @@
 exports[`HistoryItem component renders HistoryItem 1`] = `
 <DocumentFragment>
   <div
-    class="history-item"
+    class="historyitem"
   >
     <span
-      class="method-area"
-    />
+      class="methodarea"
+    >
+      POST
+    </span>
     <span
-      class="url-area"
-    />
+      class="urlarea"
+    >
+      www.google.com
+    </span>
   </div>
 </DocumentFragment>
 `;

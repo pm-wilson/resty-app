@@ -16,7 +16,7 @@ class Brain extends Component {
   }
 
   onSubmit = () => {
-    
+
   }
 
   render() {
@@ -24,7 +24,7 @@ class Brain extends Component {
       <div>
         <Input />
         <Output />
-        <History />
+        <History history={this.state.history}/>
       </div>
     );
   }

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`History component renders History 1`] = `
+<DocumentFragment>
+  <div
+    class="historylist"
+  >
+    <div
+      class="historyitem"
+    >
+      <span
+        class="methodarea"
+      >
+        GET
+      </span>
+      <span
+        class="urlarea"
+      >
+        futuramaapi.herokuapp.com/api/v2/characters
+      </span>
+    </div>
+    <div
+      class="historyitem"
+    >
+      <span
+        class="methodarea"
+      >
+        GET
+      </span>
+      <span
+        class="urlarea"
+      >
+        futuramaapi.herokuapp.com/api/quotes
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
