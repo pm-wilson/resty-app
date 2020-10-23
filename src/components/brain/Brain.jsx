@@ -13,11 +13,11 @@ class Brain extends Component {
   }
 
   onChange = () => {
-
+    //update url, body and method
   }
 
   onSubmit = () => {
-    //hit api
+    //add info to history, hit api, update text
   }
 
   render() {
