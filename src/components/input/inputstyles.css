@@ -1,0 +1,15 @@
+.methodradio {
+  border: 2px solid blue;
+}
+
+.addresssearch {
+  border: 2px solid green;
+}
+
+.jsonbody {
+  border: 2px solid pink;
+}
+
+.submitbutton {
+  background: orange;
+}

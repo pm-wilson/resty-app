@@ -1,10 +1,10 @@
 import React from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import Brain from './Brain';
+import Controller from './Controller';
 
-describe('Brain container', () => {
+describe('Controller container', () => {
   it('displays the greeting', () => {
-    render(<Brain />);
+    render(<Controller />);
 
     const urlInput = screen.getByLabelText('greeting');
 

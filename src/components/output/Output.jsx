@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactJson from 'react-json-view';
+import styles from './outputstyles.css';
 
 const Output = ({ text }) => (
-  <div><ReactJson src={text} /></div>
+  <div className={styles.outputtext}><ReactJson src={text} /></div>
 );
 
 Output.propTypes = {
