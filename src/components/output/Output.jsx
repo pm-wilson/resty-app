@@ -8,7 +8,7 @@ const Output = ({ text }) => (
 );
 
 Output.propTypes = {
-  text: PropTypes.object.isRequired,
+  text: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
 };
 
 export default Output;
