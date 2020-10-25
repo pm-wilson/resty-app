@@ -1,13 +1,19 @@
-export const hitApi = (url, body, method) => {
-  if(method === 'GET') {
+export const hitApi = (url, method, body) => {
+  if(method !== 'GET') {
     return fetch(url, {
       method,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body
     })
       .then(res => res.json());
   } else {
     return fetch(url, {
       method,
-      body,
+      headers: {
+        'Content-Type': 'application/json'
+      },
     })
       .then(res => res.json());
   }

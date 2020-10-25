@@ -14,40 +14,51 @@ class Controller extends Component {
     loading: false,
   }
 
+  setLoading = () => this.setState({ loading: true })
+  setUnloading = () => this.setState({ loading: false })
+
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
   }
 
-  handleSubmit = async(e) => {
-    e.preventDefault();
-
-    this.setState({ loading: true });
-
+  updateHistory = newHistoryItem => {
+    console.log('history updated');
+    const newHistoryItemData = newHistoryItem;
     const now = new Date().toString();
-    const { url, method, body } = this.state;
-    const newHistoryItem = {
-      url,
-      method,
-      body,
-      date: now,
-    };
     const newHistory = this.state.history;
 
-    newHistory.push(newHistoryItem);
+    newHistoryItemData.date = now;
+    newHistory.push(newHistoryItemData);
     this.setState({ history: newHistory }); 
+  }
+
+  updateText = newText => {
+    console.log(newText, 'new text');
+    this.setState({ text: newText });
+  }
+
+  fetchApi = (url, method, body) => {
+    console.log(method, 'fetchmethod');
+    return hitApi(url, method, body)
+      .then(res => this.updateText(res));
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(this.state, 'api zeo');
+    const { url, method, body } = this.state;
+
+    this.setLoading();
+    this.updateHistory({ url, method, body, });
+
+    console.log(this.state, 'api one');
+
+    this.fetchApi(url, method, body);
 
 
-    const apiResult = await hitApi(url, body, method);
-
-    console.log(apiResult, 'api');
+    console.log(this.state, 'api end');
     
-    this.setState(apiResult);
-
-    console.log(state, 'submit');
-
-    this.setState({ loading: false });
-
-    console.log(state, 'finalstate');
   }
 
   render() {
