@@ -1,0 +1,11 @@
+body {
+  background: #0E131F;
+}
+
+.controllercontainer {
+  max-width: 1500px;
+  border-radius: 15px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+}

@@ -4,12 +4,13 @@ import styles from './inputstyles.css';
 
 const Input = ({ url, body, onChange, onSubmit }) => (
   <div>
+    <h1 className={styles.appname}>Patricks Resty-App</h1>
     <form onSubmit={onSubmit} >
       <div className={styles.methodradio}>
         <label>
           <span>GET</span>
           <input
-            selected
+            className={styles.radiobutton}
             type="radio"
             name="method"
             id="get"
@@ -20,6 +21,7 @@ const Input = ({ url, body, onChange, onSubmit }) => (
         <label>
           <span>POST</span>
           <input
+            className={styles.radiobutton}
             type="radio"
             name="method"
             id="post"
@@ -30,6 +32,7 @@ const Input = ({ url, body, onChange, onSubmit }) => (
         <label>
           <span>PUT</span>
           <input
+            className={styles.radiobutton}
             type="radio"
             name="method"
             id="put"
@@ -40,6 +43,7 @@ const Input = ({ url, body, onChange, onSubmit }) => (
         <label>
           <span>PATCH</span>
           <input
+            className={styles.radiobutton}
             type="radio"
             name="method"
             id="patch"
@@ -50,6 +54,7 @@ const Input = ({ url, body, onChange, onSubmit }) => (
         <label>
           <span>DELETE</span>
           <input
+            className={styles.radiobutton}
             type="radio"
             name="method"
             id="delete"
@@ -67,6 +72,7 @@ const Input = ({ url, body, onChange, onSubmit }) => (
           onChange={onChange}
         />
       </label>
+      <br />
       <label className={styles.jsonbody}>JSON Body
         <input
           id="body"

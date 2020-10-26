@@ -2,8 +2,15 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="controllercontainer"
+  >
     <div>
+      <h1
+        class="appname"
+      >
+        Patricks Resty-App
+      </h1>
       <form>
         <div
           class="methodradio"
@@ -13,6 +20,7 @@ exports[`App component renders App 1`] = `
               GET
             </span>
             <input
+              class="radiobutton"
               id="get"
               name="method"
               type="radio"
@@ -24,6 +32,7 @@ exports[`App component renders App 1`] = `
               POST
             </span>
             <input
+              class="radiobutton"
               id="post"
               name="method"
               type="radio"
@@ -35,6 +44,7 @@ exports[`App component renders App 1`] = `
               PUT
             </span>
             <input
+              class="radiobutton"
               id="put"
               name="method"
               type="radio"
@@ -46,6 +56,7 @@ exports[`App component renders App 1`] = `
               PATCH
             </span>
             <input
+              class="radiobutton"
               id="patch"
               name="method"
               type="radio"
@@ -57,6 +68,7 @@ exports[`App component renders App 1`] = `
               DELETE
             </span>
             <input
+              class="radiobutton"
               id="delete"
               name="method"
               type="radio"
@@ -75,6 +87,7 @@ exports[`App component renders App 1`] = `
             value=""
           />
         </label>
+        <br />
         <label
           class="jsonbody"
         >
@@ -92,6 +105,11 @@ exports[`App component renders App 1`] = `
           Submit
         </button>
       </form>
+    </div>
+    <div
+      class="historylist"
+    >
+      History:
     </div>
     <div
       class="outputtext"
@@ -213,9 +231,6 @@ exports[`App component renders App 1`] = `
         </div>
       </div>
     </div>
-    <div
-      class="historylist"
-    />
   </div>
 </DocumentFragment>
 `;

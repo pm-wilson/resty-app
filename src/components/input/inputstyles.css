@@ -1,15 +1,27 @@
+label {
+  color: #ff0035;
+  margin: 25px;
+  border: 1px solid #8b939c;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.appname {
+  color: #ff0035;
+}
+
 .methodradio {
-  border: 2px solid blue;
-}
-
-.addresssearch {
-  border: 2px solid green;
-}
-
-.jsonbody {
-  border: 2px solid pink;
+  display: flex;
 }
 
 .submitbutton {
-  background: orange;
+  margin: 25px;
+  display: block;
+  background: #ff0035;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.radiobutton {
+  cursor: pointer;
 }

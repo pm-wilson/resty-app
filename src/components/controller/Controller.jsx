@@ -3,6 +3,7 @@ import Input from '../input/Input';
 import Output from '../output/Output';
 import History from '../history/History';
 import { hitApi } from '../../services/hit-api';
+import styles from './controllerstyles.css';
 
 class Controller extends Component {
   state = {
@@ -51,8 +52,6 @@ class Controller extends Component {
       this.fetchApi(url, method, body);
       this.setUnloading();
     }
-
-    console.log(this.state, 'state');
   }
 
   findBody = (date) => {
@@ -79,10 +78,10 @@ class Controller extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.controllercontainer}>
         <Input url={this.state.url} body={this.state.body} onChange={this.handleChange} onSubmit={this.handleSubmit} />
-        <Output url={this.state.url} text={this.state.text} />
         <History history={this.state.history} historyClick={this.historyClick} />
+        <Output url={this.state.url} text={this.state.text} />
       </div>
     );
   }

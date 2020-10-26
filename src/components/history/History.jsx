@@ -15,7 +15,7 @@ const History = ({ history, historyClick }) => {
   ));
 
   return (
-    <div className={styles.historylist}>
+    <div className={styles.historylist}>History:
       {historyList}
     </div>
   );

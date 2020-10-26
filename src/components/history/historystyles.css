@@ -1,4 +1,21 @@
 .historylist {
-  background-color: gray;
-  border: 2px solid black;
+  background-color: #59546c;
+  width: 410px;
+  padding: 10px;
+  overflow: none;
+  border: 2px solid #ff0035;
+  border-radius: 15px;
+  margin: 25px;
+}
+
+.historyitem {
+  background-color: #38405f;
+  border-radius: 15px;
+  margin: 8px;
+  padding: 10px;
+  color: white;
+}
+
+span {
+  display: block;
 }
