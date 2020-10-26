@@ -1,6 +1,6 @@
 import React from 'react';
-import Brain from '../brain/Brain';
+import Controller from '../controller/Controller';
 
 export default function App() {
-  return <Brain />;
+  return <Controller />;
 }

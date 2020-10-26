@@ -2,7 +2,10 @@
 
 exports[`Output component renders Output 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="outputtext"
+    data-testid="displayoutput"
+  >
     <div
       class="react-json-view"
       style="font-family: monospace; cursor: default; background-color: rgba(0, 0, 0, 0); position: relative;"

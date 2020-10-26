@@ -2,85 +2,122 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="controllercontainer"
+  >
     <div>
-      <form>
-        <label>
-          <span>
-            GET
-          </span>
-          <input
-            id="get"
-            name="method"
-            type="radio"
-            value="GET"
-          />
-        </label>
-        <label>
-          <span>
-            POST
-          </span>
-          <input
-            id="post"
-            name="method"
-            type="radio"
-            value="POST"
-          />
-        </label>
-        <label>
-          <span>
-            PUT
-          </span>
-          <input
-            id="put"
-            name="method"
-            type="radio"
-            value="PUT"
-          />
-        </label>
-        <label>
-          <span>
-            PATCH
-          </span>
-          <input
-            id="patch"
-            name="method"
-            type="radio"
-            value="PATCH"
-          />
-        </label>
-        <label>
-          <span>
-            DELETE
-          </span>
-          <input
-            id="delete"
-            name="method"
-            type="radio"
-            value="DELETE"
-          />
-        </label>
-        <label>
-          JSON Body
-        </label>
-        <input
-          id="body"
-          name="body"
-          type="text"
-          value=""
-        />
-        <label>
+      <h1
+        class="appname"
+      >
+        Patricks Resty-App
+      </h1>
+      <form
+        data-testid="submitbutton"
+      >
+        <div
+          class="methodradio"
+        >
+          <label>
+            <span>
+              GET
+            </span>
+            <input
+              class="radiobutton"
+              id="get"
+              name="method"
+              type="radio"
+              value="GET"
+            />
+          </label>
+          <label>
+            <span>
+              POST
+            </span>
+            <input
+              class="radiobutton"
+              id="post"
+              name="method"
+              type="radio"
+              value="POST"
+            />
+          </label>
+          <label>
+            <span>
+              PUT
+            </span>
+            <input
+              class="radiobutton"
+              id="put"
+              name="method"
+              type="radio"
+              value="PUT"
+            />
+          </label>
+          <label>
+            <span>
+              PATCH
+            </span>
+            <input
+              class="radiobutton"
+              id="patch"
+              name="method"
+              type="radio"
+              value="PATCH"
+            />
+          </label>
+          <label>
+            <span>
+              DELETE
+            </span>
+            <input
+              class="radiobutton"
+              id="delete"
+              name="method"
+              type="radio"
+              value="DELETE"
+            />
+          </label>
+        </div>
+        <label
+          class="addresssearch"
+        >
           Address Search
+          <input
+            data-testid="addressinput"
+            id="url"
+            name="url"
+            type="text"
+            value=""
+          />
         </label>
-        <input
-          id="text"
-          name="text"
-          type="text"
-          value=""
-        />
+        <br />
+        <label
+          class="jsonbody"
+        >
+          JSON Body
+          <input
+            id="body"
+            name="body"
+            type="text"
+            value=""
+          />
+        </label>
+        <button
+          class="submitbutton"
+        >
+          Submit
+        </button>
       </form>
     </div>
-    <div>
+    <div
+      class="historylist"
+    >
+      History:
+    </div>
+    <div
+      class="outputtext"
+      data-testid="displayoutput"
+    >
       <div
         class="react-json-view"
         style="font-family: monospace; cursor: default; background-color: rgba(0, 0, 0, 0); position: relative;"
@@ -103,15 +140,15 @@ exports[`App component renders App 1`] = `
                     style="display: inline-block; width: 17px;"
                   >
                     <span
-                      class="collapsed-icon"
+                      class="expanded-icon"
                     >
                       <svg
                         fill="currentColor"
-                        style="vertical-align: top; color: rgb(42, 161, 152); height: 1em; width: 1em; padding-left: 2px;"
+                        style="vertical-align: top; color: rgb(88, 110, 117); height: 1em; width: 1em; padding-left: 2px;"
                         viewBox="0 0 15 15"
                       >
                         <path
-                          d="M0 14l6-6-6-6z"
+                          d="M0 5l6 6 6-6z"
                         />
                       </svg>
                     </span>
@@ -145,17 +182,8 @@ exports[`App component renders App 1`] = `
                   <span
                     style="display: inline-block; cursor: pointer; font-weight: bold; color: rgb(0, 43, 54);"
                   >
-                    {
+                    [
                   </span>
-                </span>
-              </span>
-              <span
-                class="brace-row"
-              >
-                <span
-                  style="display: inline-block; cursor: pointer; font-weight: bold; color: rgb(0, 43, 54); padding-left: 0px;"
-                >
-                  }
                 </span>
                 <div
                   class="object-meta-data"
@@ -165,7 +193,7 @@ exports[`App component renders App 1`] = `
                     class="object-size"
                     style="color: rgba(0, 0, 0, 0.3); border-radius: 3px; font-style: italic; margin: 0px 6px 0px 0px; cursor: default;"
                   >
-                    0 items
+                    1 item
                   </span>
                   <span
                     class="copy-to-clipboard-container"
@@ -193,14 +221,89 @@ exports[`App component renders App 1`] = `
                   </span>
                 </div>
               </span>
+              <div
+                class="pushed-content object-container"
+              >
+                <div
+                  class="object-content"
+                  style="margin-left: 6px;"
+                >
+                  <div
+                    class="variable-row"
+                    style="border-left: 1px solid rgb(235, 235, 235); padding: 3px 5px 3px 20px;"
+                  >
+                    <span
+                      style="display: inline-block; color: rgb(108, 113, 196); letter-spacing: 0.5px; font-style: none; vertical-align: top; opacity: 0.85;"
+                    >
+                      0
+                      <div
+                        style="display: inline-block; margin: 0px 5px; color: rgb(0, 43, 54); vertical-align: top;"
+                      >
+                        :
+                      </div>
+                    </span>
+                    <div
+                      class="variable-value"
+                      style="display: inline-block; padding-right: 6px; position: relative; cursor: default;"
+                    >
+                      <div
+                        style="display: inline-block; color: rgb(203, 75, 22);"
+                      >
+                        <span
+                          class="data-type-label"
+                          style="font-size: 11px; margin-right: 4px; opacity: 0.8;"
+                        >
+                          string
+                        </span>
+                        <span
+                          class="string-value"
+                          style="cursor: default;"
+                        >
+                          "Try searching something"
+                        </span>
+                      </div>
+                    </div>
+                    <span
+                      class="copy-to-clipboard-container"
+                    >
+                      <span
+                        style="cursor: pointer; display: inline;"
+                      >
+                        <span
+                          class="copy-icon"
+                        >
+                          <svg
+                            fill="currentColor"
+                            preserveAspectRatio="xMidYMid meet"
+                            style="vertical-align: top; color: rgb(38, 139, 210); font-size: 15px; margin-right: 3px; height: 1em; width: 1em;"
+                            viewBox="0 0 40 40"
+                          >
+                            <g>
+                              <path
+                                d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
+                              />
+                            </g>
+                          </svg>
+                        </span>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <span
+                class="brace-row"
+              >
+                <span
+                  style="display: inline-block; cursor: pointer; font-weight: bold; color: rgb(0, 43, 54); padding-left: 3px;"
+                >
+                  ]
+                </span>
+              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div
-      class="historylist"
-    />
   </div>
 </DocumentFragment>
 `;

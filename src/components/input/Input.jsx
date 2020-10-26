@@ -1,76 +1,89 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './inputstyles.css';
 
 const Input = ({ url, body, onChange, onSubmit }) => (
   <div>
-    <form onSubmit={onSubmit} >
-      <label>
-        <span>GET</span>
+    <h1 className={styles.appname}>Patricks Resty-App</h1>
+    <form onSubmit={onSubmit} data-testid="submitbutton">
+      <div className={styles.methodradio}>
+        <label>
+          <span>GET</span>
+          <input
+            className={styles.radiobutton}
+            type="radio"
+            name="method"
+            id="get"
+            value="GET"
+            onChange={onChange}
+          />
+        </label>
+        <label>
+          <span>POST</span>
+          <input
+            className={styles.radiobutton}
+            type="radio"
+            name="method"
+            id="post"
+            value="POST"
+            onChange={onChange}
+          />
+        </label>
+        <label>
+          <span>PUT</span>
+          <input
+            className={styles.radiobutton}
+            type="radio"
+            name="method"
+            id="put"
+            value="PUT"
+            onChange={onChange}
+          />
+        </label>
+        <label>
+          <span>PATCH</span>
+          <input
+            className={styles.radiobutton}
+            type="radio"
+            name="method"
+            id="patch"
+            value="PATCH"
+            onChange={onChange}
+          />
+        </label>
+        <label>
+          <span>DELETE</span>
+          <input
+            className={styles.radiobutton}
+            type="radio"
+            name="method"
+            id="delete"
+            value="DELETE"
+            onChange={onChange}
+          />
+        </label>
+      </div>
+      <label className={styles.addresssearch}>Address Search
         <input
-          selected
-          type="radio"
-          name="method"
-          id="get"
-          value="GET"
+          data-testid="addressinput"
+          id="url"
+          type="text"
+          name="url"
+          value={url}
           onChange={onChange}
         />
       </label>
-      <label>
-        <span>POST</span>
+      <br />
+      <label className={styles.jsonbody}>JSON Body
         <input
-          type="radio"
-          name="method"
-          id="post"
-          value="POST"
+          id="body"
+          type="text"
+          name="body"
+          value={body}
           onChange={onChange}
         />
       </label>
-      <label>
-        <span>PUT</span>
-        <input
-          type="radio"
-          name="method"
-          id="put"
-          value="PUT"
-          onChange={onChange}
-        />
-      </label>
-      <label>
-        <span>PATCH</span>
-        <input
-          type="radio"
-          name="method"
-          id="patch"
-          value="PATCH"
-          onChange={onChange}
-        />
-      </label>
-      <label>
-        <span>DELETE</span>
-        <input
-          type="radio"
-          name="method"
-          id="delete"
-          value="DELETE"
-          onChange={onChange}
-        />
-      </label>
-      <label>JSON Body</label>
-      <input
-        id="body"
-        type="text"
-        name="body"
-        value={body}
-        onChange={onChange}
-      />
-      <label>Address Search</label>
-      <input
-        id="text"
-        type="text"
-        name="text"
-        value={url}
-        onChange={onChange}
-      />
+      <button className={styles.submitbutton}>Submit</button>
     </form>
   </div>
 );
