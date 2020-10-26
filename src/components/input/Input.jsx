@@ -5,7 +5,7 @@ import styles from './inputstyles.css';
 const Input = ({ url, body, onChange, onSubmit }) => (
   <div>
     <h1 className={styles.appname}>Patricks Resty-App</h1>
-    <form onSubmit={onSubmit} >
+    <form onSubmit={onSubmit} data-testid="submitbutton">
       <div className={styles.methodradio}>
         <label>
           <span>GET</span>
@@ -65,6 +65,7 @@ const Input = ({ url, body, onChange, onSubmit }) => (
       </div>
       <label className={styles.addresssearch}>Address Search
         <input
+          data-testid="addressinput"
           id="url"
           type="text"
           name="url"

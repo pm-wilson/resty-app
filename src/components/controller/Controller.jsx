@@ -10,7 +10,7 @@ class Controller extends Component {
     history: [],
     url: '',
     method: 'GET',
-    text: {},
+    text: ['Try searching something'],
     body: '',
     loading: false,
   }

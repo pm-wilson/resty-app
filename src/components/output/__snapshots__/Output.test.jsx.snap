@@ -4,6 +4,7 @@ exports[`Output component renders Output 1`] = `
 <DocumentFragment>
   <div
     class="outputtext"
+    data-testid="displayoutput"
   >
     <div
       class="react-json-view"

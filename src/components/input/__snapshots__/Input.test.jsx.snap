@@ -8,7 +8,9 @@ exports[`Input component renders Input 1`] = `
     >
       Patricks Resty-App
     </h1>
-    <form>
+    <form
+      data-testid="submitbutton"
+    >
       <div
         class="methodradio"
       >
@@ -78,6 +80,7 @@ exports[`Input component renders Input 1`] = `
       >
         Address Search
         <input
+          data-testid="addressinput"
           id="url"
           name="url"
           type="text"
